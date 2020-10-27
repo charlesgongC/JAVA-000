@@ -4,7 +4,7 @@
 
 共发生12次GC，9次Young GC，3次Full GC
 
-![Image text](https://github.com/charlesgongC/JAVA-000/tree/main/Week_02/images/CMS%20GC1.png)
+![Image text](https://github.com/charlesgongC/JAVA-000/tree/main/Week_02/images/串行GC.png)
 
 细节如下：
 
