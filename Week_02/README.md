@@ -4,6 +4,8 @@
 
 共发生12次GC，9次Young GC，3次Full GC
 
+![Image text](https://github.com/charlesgongC/JAVA-000/tree/main/Week_02/images/CMS GC1.png)
+
 细节如下：
 
 | GC类型 |Young区内存变化(KB)  |Old区内存变化(KB)| 耗时(ms) |
