@@ -70,7 +70,7 @@
 + young模式回收效率很高，耗时都在30ms内，回收15M左右内存
 + mixed模式耗时更短，
 + cleanup 失败的原因是应该刚好被young回收过，所以没有可回收的内存吗？
-![Image](https://github.com/charlesgongC/JAVA-000/blob/main/Week_02/images/GC-2.png)
+![Image](https://github.com/charlesgongC/JAVA-000/blob/main/Week_02/images/G1-2.png)
 + Full GC 效率高于 young和mixed，但耗时也高许多
 
 
