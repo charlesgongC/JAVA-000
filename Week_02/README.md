@@ -1,4 +1,4 @@
-## 不同GC性能分析
+## 各GC模式性能分析
 ### 串行GC
 >java -XX:+UseSerialGC -Xmx256m -Xms256m -XX:+PrintGCDetails -XX:+PrintGCDateStamps GCLogAnalysis
 
@@ -39,9 +39,9 @@
 分析：
 + 1.Young GC 时效率和串行GC相近
 + 2.Full GC 时，年轻代被清空，老年代的释放也大于串行GC
-
+ 
 ### CMS GC
->java -XX:+UseConcMarkSweepGC -Xmx256m -Xms256m -XX:+PrintGCDetails -XX:+PrintGCDateStamps GCLogAnalysis
+>java -XX:+UseConcMarkSweepGC -Xmx256m -Xms256m -XX:+PrintGCDetails -XX:+PrintGCDateS`****`tamps GCLogAnalysis
 
 共发生11次GC，9次Young GC，2次Full GC
 细节如下：
@@ -69,6 +69,12 @@
 + cleanup 失败的原因是应该刚好被young回收过，所以没有可回收的内存吗？
 ![Image text](https://github.com/charlesgongC/JAVA-000/blob/main/Week_02/images/GC%202.png)
 + Full GC 效率高于 young和mixed，但耗时也高许多
+
+
+## 压测演练 (wrk)
+
+
+
 
 
 
