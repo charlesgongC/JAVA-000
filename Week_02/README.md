@@ -5,6 +5,8 @@
 共发生12次GC，9次Young GC，3次Full GC
 
 ![Image](https://github.com/charlesgongC/JAVA-000/tree/main/Week_02/images/G1GC1.png)
+<img src="https://github.com/charlesgongC/JAVA-000/blob/main/Week_02/images/G1GC1.png" width = "800"  alt="并行GC" />
+
 
 细节如下：
 
