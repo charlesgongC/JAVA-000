@@ -2,11 +2,8 @@
 ### 串行GC
 >java -XX:+UseSerialGC -Xmx256m -Xms256m -XX:+PrintGCDetails -XX:+PrintGCDateStamps GCLogAnalysis
 
+<img src="https://github.com/charlesgongC/JAVA-000/blob/main/Week_02/images/串行GC.png" width = "800"  alt="串行GC" />
 共发生12次GC，9次Young GC，3次Full GC
-
-![Image](https://github.com/charlesgongC/JAVA-000/tree/main/Week_02/images/G1GC1.png)
-<img src="https://github.com/charlesgongC/JAVA-000/blob/main/Week_02/images/G1GC1.png" width = "800"  alt="并行GC" />
-
 
 细节如下：
 
@@ -27,8 +24,8 @@
 ### 并行GC
 >java -XX:+UseParallelGC -Xmx256m -Xms256m -XX:+PrintGCDetails -XX:+PrintGCDateStamps GCLogAnalysis
 
-![Image](https://github.com/charlesgongC/JAVA-000/tree/main/Week_02/images/并行GC1.png)
-![Image](https://github.com/charlesgongC/JAVA-000/tree/main/Week_02/images/并行GC2.png)
+<img src="https://github.com/charlesgongC/JAVA-000/blob/main/Week_02/images/并行GC1.png" width = "800"  alt="并行GC" />
+<img src="https://github.com/charlesgongC/JAVA-000/blob/main/Week_02/images/并行GC2.png" width = "800"  alt="并行GC" />
 
 共发生12次GC，10次Young GC，2次Full GC
 细节如下：
@@ -48,6 +45,9 @@
 ### CMS GC
 >java -XX:+UseConcMarkSweepGC -Xmx256m -Xms256m -XX:+PrintGCDetails -XX:+PrintGCDateS`****`tamps GCLogAnalysis
 
+<img src="https://github.com/charlesgongC/JAVA-000/blob/main/Week_02/images/CMSGC1.png.png" width = "800"  alt="CMSGC1" />
+<img src="https://github.com/charlesgongC/JAVA-000/blob/main/Week_02/images/CMSGC2.png.png" width = "800"  alt="CMSGC2" />
+
 共发生11次GC，9次Young GC，2次Full GC
 细节如下：
 
@@ -66,13 +66,16 @@
 ### G1 GC
 >java -XX:+UseG1GC -Xmx256m -Xms256m -XX:+PrintGC -XX:+PrintGCDateStamps GCLogAnalysis
 
+<img src="https://github.com/charlesgongC/JAVA-000/blob/main/Week_02/images/G1GC1.png" width = "800"  alt="G1GC1" />
+<img src="https://github.com/charlesgongC/JAVA-000/blob/main/Week_02/images/G1GC2.png" width = "800"  alt="G1GC2" />
+
 16次Young GC，10次mixed GC,1次Full GC
 
 分析：
 + young模式回收效率很高，耗时都在30ms内，回收15M左右内存
-+ mixed模式耗时更短，
++ mixed模式耗时更短，但好像是内存比较小的时候用young，比较高的时候用mixed
+<img src="https://github.com/charlesgongC/JAVA-000/blob/main/Week_02/images/G1-1.png" width = "800"  alt="G1GC2" />
 + cleanup 失败的原因是应该刚好被young回收过，所以没有可回收的内存吗？
-
 ![](https://github.com/charlesgongC/JAVA-000/blob/main/Week_02/images/G1-2.png)
 + Full GC 效率高于 young和mixed，但耗时也高许多
 
