@@ -45,8 +45,8 @@
 ### CMS GC
 >java -XX:+UseConcMarkSweepGC -Xmx256m -Xms256m -XX:+PrintGCDetails -XX:+PrintGCDateS`****`tamps GCLogAnalysis
 
-<img src="https://github.com/charlesgongC/JAVA-000/blob/main/Week_02/images/CMSGC1.png.png" width = "800"  alt="CMSGC1" />
-<img src="https://github.com/charlesgongC/JAVA-000/blob/main/Week_02/images/CMSGC2.png.png" width = "800"  alt="CMSGC2" />
+<img src="https://github.com/charlesgongC/JAVA-000/blob/main/Week_02/images/CMSGC1.png" width = "800"  alt="CMSGC1" />
+<img src="https://github.com/charlesgongC/JAVA-000/blob/main/Week_02/images/CMSGC2.png" width = "800"  alt="CMSGC2" />
 
 共发生11次GC，9次Young GC，2次Full GC
 细节如下：
@@ -76,7 +76,7 @@
 + mixed模式耗时更短，但好像是内存比较小的时候用young，比较高的时候用mixed
 <img src="https://github.com/charlesgongC/JAVA-000/blob/main/Week_02/images/G1-1.png" width = "800"  alt="G1GC2" />
 + cleanup 失败的原因是应该刚好被young回收过，所以没有可回收的内存吗？
-![](https://github.com/charlesgongC/JAVA-000/blob/main/Week_02/images/G1-2.png)
+<img src="https://github.com/charlesgongC/JAVA-000/blob/main/Week_02/images/G1-2.png" width = "800"  alt="G1GC2" />
 + Full GC 效率高于 young和mixed，但耗时也高许多
 
 ## 压测演练 (wrk)
