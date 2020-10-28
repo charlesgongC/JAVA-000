@@ -4,7 +4,7 @@
 
 共发生12次GC，9次Young GC，3次Full GC
 
-![Image text](https://github.com/charlesgongC/JAVA-000/tree/main/Week_02/images/串行GC.png)
+![Image](https://github.com/charlesgongC/JAVA-000/tree/main/Week_02/images/串行GC.png)
 
 细节如下：
 
@@ -24,6 +24,9 @@
 
 ### 并行GC
 >java -XX:+UseParallelGC -Xmx256m -Xms256m -XX:+PrintGCDetails -XX:+PrintGCDateStamps GCLogAnalysis
+
+![Image](https://github.com/charlesgongC/JAVA-000/tree/main/Week_02/images/并行GC1.png)
+![Image](https://github.com/charlesgongC/JAVA-000/tree/main/Week_02/images/并行GC2.png)
 
 共发生12次GC，10次Young GC，2次Full GC
 细节如下：
@@ -67,7 +70,7 @@
 + young模式回收效率很高，耗时都在30ms内，回收15M左右内存
 + mixed模式耗时更短，
 + cleanup 失败的原因是应该刚好被young回收过，所以没有可回收的内存吗？
-![Image text](https://github.com/charlesgongC/JAVA-000/blob/main/Week_02/images/GC%202.png)
+![Image](https://github.com/charlesgongC/JAVA-000/blob/main/Week_02/images/GC-2.png)
 + Full GC 效率高于 young和mixed，但耗时也高许多
 
 
